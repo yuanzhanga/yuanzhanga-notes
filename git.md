@@ -1,6 +1,3 @@
-record.bind_status === 1 ? styles.preemption : ''
-最好把不符合要求的设为‘’，这样即使这个字段不存在也不会展示多余样式
-
 _# 合并分支_
 
 git merge <分支名>
@@ -46,4 +43,14 @@ git fsck --lost-found 撤销drop
 _# 撤销到某一HEAD版本_
 git reflog -num
 git reset --hard HEAD@{n}
+
+
+
+
+
+输入station ID 前端校验->无效
+                     ->检查 station 状态-》校验通过-》输入staffID 
+                                      -》不通过-》station ID不存在报错
+                                              =》station被占用-》弹窗 此包装站正在进行会话。恢复会话？=》cancle-> 输入staffID 
+                                                                                              =》confirm->切换页面
 
